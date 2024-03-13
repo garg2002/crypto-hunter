@@ -1,13 +1,12 @@
-
 import React from "react";
-import Carousel from "../components/Banner/Carousel"
 import Banner from "../components/Banner/Banner";
+import CoinsTable from "../components/CoinsTable";
 
 function HomePage() {
   return (
     <div>
       <Banner/>
-      <Carousel />
+      <CoinsTable />
     </div>
   )
 }

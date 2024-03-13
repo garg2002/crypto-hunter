@@ -5,9 +5,9 @@ import { TrendingCoins } from "../../config/api";
 import AliceCarousel from "react-alice-carousel";
 import { Link } from "react-router-dom";
 
-export function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3}) + (?!\d))/g, ",");
-}
+export function numberWithCommas  (x)  {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
 
 const Carousel = () => {
   const [trend, setTrend] = useState([]);
@@ -18,7 +18,6 @@ const Carousel = () => {
 
   const fetchTrendCoins = async () => {
     const { data } = await axios.get(TrendingCoins(currency));
-    console.log(data);
     setTrend(data);
   };
 
@@ -61,7 +60,7 @@ const Carousel = () => {
           </span>
         </span>
         <span style={{ fontSize: 22, fontWeight: 500 }}>
-          {symbol} {numberWithCommas(coin?.current_price.toFixed(2))};
+          {symbol} {numberWithCommas(coin?.current_price.toFixed(2))}
         </span>
       </Link>
     );
@@ -78,7 +77,7 @@ const Carousel = () => {
         height: "50%",
         display: "flex",
         alignItems: " center",
-        marginTop: "-170px",
+
       }}
     >
       <AliceCarousel
